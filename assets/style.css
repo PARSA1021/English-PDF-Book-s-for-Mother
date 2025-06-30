@@ -5,28 +5,30 @@
 
 body {
   font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%); /* 부드러운 배경색을 약간 더 밝고 미묘하게 조정 */
+  /* 배경: 학습 자료 같은 차분하고 부드러운 그라데이션 (종이 질감 느낌) */
+  background: linear-gradient(135deg, #f8fcfd 0%, #eef6f9 100%); /* Warm light blue-grey to off-white */
   margin: 0;
   padding: 0;
-  color: #333;
-  line-height: 1.65; /* 가독성 향상을 위해 줄 간격 미세 조정 */
+  color: #333; /* 기본 텍스트 색상 유지 */
+  line-height: 1.65;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased; /* 폰트 안티앨리어싱 */
-  overflow-x: hidden; /* 가로 스크롤 방지 */
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* Header Styling */
 .header {
   text-align: center;
   padding: 3.5rem 1rem 2.5rem;
-  background: #ffffff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12); /* 그림자 강화 및 확산 */
+  /* 헤더 배경: 신뢰감 있는 톤의 그라데이션 */
+  background: linear-gradient(135deg, #e0f2f7 0%, #ccebf2 100%); /* Light aqua to soft blue */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15); /* 그림자 강화 */
   position: relative;
   overflow: hidden;
-  margin-bottom: 3.5rem; /* 하단 마진 증가 */
-  border-bottom-left-radius: 30px; /* 헤더 하단 모서리 둥글게 */
-  border-bottom-right-radius: 30px;
-  animation: headerFadeIn 1s ease-out forwards; /* 헤더 로드 시 페이드인 애니메이션 */
+  margin-bottom: 3.5rem;
+  border-bottom-left-radius: 35px; /* 모서리 더 둥글게 */
+  border-bottom-right-radius: 35px;
+  animation: headerFadeIn 1s ease-out forwards;
 }
 
 @keyframes headerFadeIn {
@@ -46,48 +48,49 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 12px; /* 더 두꺼운 강조선 */
-  background: linear-gradient(90deg, #6dd5ed, #2193b0, #7dd56f, #32cd32); /* 더 다채로운 그라디언트 유지 */
-  opacity: 0.95; /* 약간 더 선명하게 */
-  filter: saturate(1.2); /* 색상 채도 약간 증가 */
+  height: 14px; /* 강조선 두께 증가 */
+  /* 강조선 그라데이션: 지적인 느낌의 차분한 컬러 스펙트럼 */
+  background: linear-gradient(90deg, #5ebad9, #36a4cb, #2a88a8, #1d6b87); /* Deep blue to teal */
+  opacity: 0.95;
+  filter: saturate(1.1); /* 채도 약간 증가 */
 }
 
 .header h1 {
   margin: 0;
-  font-size: 3.2rem; /* 더 큰 제목 */
-  color: #2c3e50;
-  font-weight: 800; /* 더 두껍게 */
-  letter-spacing: -0.05em; /* 더 타이트한 자간 */
-  text-shadow: 3px 3px 8px rgba(0,0,0,0.1); /* 그림자 강화 */
+  font-size: 3.4rem; /* 제목 크기 약간 증가 */
+  color: #2c3e50; /* 진한 남색 유지 */
+  font-weight: 800;
+  letter-spacing: -0.06em; /* 자간 더 타이트하게 */
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.15); /* 그림자 강화 */
 }
 
 .header p {
-  margin: 1.4rem 0 0; /* 간격 조정 */
-  font-size: 1.4rem; /* 더 큰 설명 텍스트 */
-  color: #6a7c8a; /* 설명 텍스트 색상 미세 조정 */
+  margin: 1.5rem 0 0; /* 간격 조정 */
+  font-size: 1.5rem; /* 설명 텍스트 크기 증가 */
+  color: #5f7a8b; /* 설명 텍스트 색상 미세 조정 (더 차분한 블루 그레이) */
   font-weight: 300;
-  max-width: 750px; /* 최대 너비 증가 */
+  max-width: 800px; /* 최대 너비 증가 */
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /* Book Category Section Styling */
 .book-category-section {
   max-width: 1300px;
-  margin: 0 auto 5.5rem auto; /* 섹션 간 마진 증가 */
+  margin: 0 auto 6rem auto; /* 섹션 간 마진 증가 */
   padding: 0 1.5rem;
 }
 
 .category-title {
-  font-size: 2.8rem; /* 제목 크기 증가 */
-  color: #2c3e50; /* 약간 더 진한 색상 */
-  font-weight: 800; /* 더 두껍게 */
+  font-size: 3rem; /* 제목 크기 증가 */
+  color: #2c3e50;
+  font-weight: 800;
   text-align: center;
-  margin-bottom: 3.5rem; /* 제목과 콘텐츠 간 간격 증가 */
+  margin-bottom: 4rem; /* 제목과 콘텐츠 간 간격 증가 */
   position: relative;
-  padding-bottom: 1.2rem; /* 밑줄과의 간격 증가 */
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+  padding-bottom: 1.5rem; /* 밑줄과의 간격 증가 */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.08);
 }
 
 .category-title::after {
@@ -96,48 +99,49 @@ body {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  width: 120px; /* 밑줄 너비 증가 */
-  height: 6px; /* 밑줄 두께 증가 */
-  background: linear-gradient(90deg, #6dd5ed, #2193b0); /* 강조 색상 */
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(33,147,176,0.3); /* 밑줄 그림자 추가 */
+  width: 130px; /* 밑줄 너비 증가 */
+  height: 7px; /* 밑줄 두께 증가 */
+  /* 밑줄 그라데이션: 학습 주제와 어울리는 강조색 */
+  background: linear-gradient(90deg, #ff8c69, #e06d6b); /* Soft coral to terracotta */
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(224,109,107,0.4); /* 밑줄 그림자 강화 */
 }
 
 /* Bookshelf Grid */
 .bookshelf {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 최소 너비 증가, 더 큰 카드 */
-  gap: 3rem; /* 간격 증가 */
-  padding: 0; /* .book-category-section에서 패딩 처리 */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* 최소 너비 증가, 더 큰 카드 */
+  gap: 3.5rem; /* 간격 증가 */
+  padding: 0;
 }
 
 /* Book Card Styling */
 .book-card {
   background: #ffffff;
-  border-radius: 15px; /* 실제 책처럼 덜 둥근 모서리, 약간 더 둥글게 */
+  border-radius: 18px; /* 모서리 더 둥글게 */
   text-align: center;
-  padding: 1.8rem; /* 패딩 조정 */
+  padding: 2rem; /* 패딩 조정 */
   box-shadow:
-    0 2px 4px rgba(0,0,0,0.08), /* 기본 그림자 */
-    0 8px 16px rgba(0,0,0,0.12), /* 중간 그림자 */
-    0 20px 40px rgba(0,0,0,0.18); /* 깊이감 그림자 강화 */
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* 더 부드러운 전환 효과 */
+    0 4px 8px rgba(0,0,0,0.07),
+    0 12px 24px rgba(0,0,0,0.1),
+    0 25px 50px rgba(0,0,0,0.18); /* 그림자 강화 및 다양화 */
+  transition: all 0.45s cubic-bezier(0.25, 0.8, 0.25, 1); /* 더 부드럽고 긴 전환 효과 */
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid rgba(0,0,0,0.03); /* 카드 테두리 추가, 더 미묘하게 */
+  border: 1px solid rgba(0,0,0,0.05); /* 카드 테두리 약간 더 눈에 띄게 */
 }
 
-.book-card::before { /* 카드 상단에 미묘한 그라디언트 테두리 추가 */
+.book-card::before { /* 카드 상단에 그라디언트 테두리 */
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 5px;
-  background: linear-gradient(90deg, rgba(109,213,237,0.5), rgba(33,147,176,0.5));
+  height: 6px; /* 강조선 두께 증가 */
+  background: linear-gradient(90deg, #ff8c69, #e06d6b); /* 카테고리 밑줄과 같은 강조색 그라데이션 */
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
@@ -147,11 +151,11 @@ body {
 }
 
 .book-card:hover {
-  transform: translateY(-12px) scale(1.03); /* 더 부드러운 리프트 및 스케일 */
+  transform: translateY(-15px) scale(1.04); /* 더 드라마틱한 리프트 및 스케일 */
   box-shadow:
-    0 4px 8px rgba(0,0,0,0.15),
-    0 12px 24px rgba(0,0,0,0.2),
-    0 25px 50px rgba(0,0,0,0.3); /* 호버 시 그림자 강화 */
+    0 6px 12px rgba(0,0,0,0.18),
+    0 18px 36px rgba(0,0,0,0.25),
+    0 35px 70px rgba(0,0,0,0.35); /* 호버 시 그림자 극대화 */
 }
 
 .book-card a {
@@ -167,129 +171,134 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0;
-  border-radius: 10px; /* 실제 책처럼 덜 둥근 모서리, 약간 더 둥글게 */
-  margin-bottom: 1.2rem; /* 간격 조정 */
+  border-radius: 12px; /* 모서리 더 둥글게 */
+  margin-bottom: 1.5rem; /* 간격 조정 */
   position: relative;
   overflow: hidden;
   flex-grow: 1;
-  background: #fdfdfd; /* 커버 뒷면 색상 (혹은 이미지 없을 시) */
-  height: 280px; /* 이미지 높이 유지 */
-  border: 1px solid rgba(0,0,0,0.08); /* 책 커버 테두리 */
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.07), /* 내부 그림자 강화 */
-              0 3px 6px rgba(0,0,0,0.1); /* 커버 자체의 미세한 그림자 강화 */
+  background: #fcfcfc; /* 커버 뒷면 색상 (혹은 이미지 없을 시) */
+  height: 300px; /* 이미지 높이 증가 */
+  border: 1px solid rgba(0,0,0,0.06); /* 책 커버 테두리 강화 */
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.08), /* 내부 그림자 강화 */
+              0 4px 8px rgba(0,0,0,0.12); /* 커버 자체의 미세한 그림자 강화 */
 }
 
 /* Style for book thumbnail image */
 .book-thumbnail {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* 이미지가 잘리지 않게 조정 */
-  border-radius: 8px; /* 이미지 모서리 둥글게 */
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* 부드러운 전환 효과 */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.12); /* 썸네일 이미지 자체 그림자 강화 */
+  object-fit: contain;
+  border-radius: 10px; /* 이미지 모서리 둥글게 */
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* 썸네일 이미지 자체 그림자 강화 */
 }
 
 .book-card:hover .book-thumbnail {
-  transform: scale(1.05); /* 호버 시 이미지 살짝 확대 */
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* 호버 시 썸네일 그림자 강화 */
+  transform: scale(1.07); /* 호버 시 이미지 더 확대 */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25); /* 호버 시 썸네일 그림자 강화 */
 }
 
 .book-card h3 {
-  margin: 0.9rem 0 0; /* 간격 조정 */
-  font-size: 1.45rem; /* 제목 크기 조정 */
-  color: #2c3e50; /* 더 진한 색상 */
-  font-weight: 800; /* 더 두껍게 */
-  line-height: 1.4;
-  letter-spacing: -0.02em;
+  margin: 1rem 0 0; /* 간격 조정 */
+  font-size: 1.6rem; /* 제목 크기 조정 */
+  color: #2c3e50;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.03em;
 }
 
 .book-card p {
-  margin: 0.4rem 0 0; /* 간격 조정 */
-  font-size: 1rem; /* 설명 텍스트 크기 조정 */
-  color: #7f8c8d; /* 더 부드러운 회색 */
-  font-weight: 500; /* 약간 두껍게 */
-  opacity: 0.95;
+  margin: 0.5rem 0 0; /* 간격 조정 */
+  font-size: 1.05rem; /* 설명 텍스트 크기 조정 */
+  color: #7a8d9a; /* 더 차분한 블루 그레이 */
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 /* Custom colors per book (will be visible only if image is not loaded or for subtle background) */
-.ff1 { background-color: #e0f7fa; } /* Soft blue */
-.ff2 { background-color: #e6fae6; } /* Soft green */
-.ff3 { background-color: #fcebeb; } /* Soft red */
-.ff4 { background-color: #fff8e6; } /* Soft orange */
-.ff5 { background-color: #f0e6ff; } /* Soft purple */
-.ff6 { background-color: #eaf0f6; } /* Soft grey */
+/* 영어책/교재 컨셉에 맞는 색상 팔레트 */
+.ff1 { background-color: #f7fbff; } /* Very light blue */
+.ff2 { background-color: #f0f7f2; } /* Very light green */
+.ff3 { background-color: #fff9f6; } /* Very light peach */
+.ff4 { background-color: #fcf9f0; } /* Very light yellow */
+.ff5 { background-color: #f9f5ff; } /* Very light purple */
+.ff6 { background-color: #f0f4f8; } /* Light grey blue */
 
 
 /* Footer Styling */
 footer {
   text-align: center;
-  font-size: 1rem; /* 푸터 폰트 크기 조정 */
+  font-size: 1.05rem; /* 푸터 폰트 크기 조정 */
   color: #777;
-  padding: 3.5rem 1rem; /* 푸터 패딩 조정 */
-  margin-top: 4.5rem; /* 상단 마진 조정 */
-  background: #ffffff;
-  box-shadow: 0 -6px 15px rgba(0,0,0,0.08); /* 그림자 조정 */
+  padding: 4rem 1rem; /* 푸터 패딩 조정 */
+  margin-top: 5rem; /* 상단 마진 조정 */
+  /* 푸터 배경: 바디 배경과 유사하나 약간 더 진한 그라데이션 */
+  background: linear-gradient(135deg, #e9f5f9 0%, #d8e6eb 100%); /* Slightly darker light blue-grey */
+  box-shadow: 0 -8px 20px rgba(0,0,0,0.1); /* 그림자 조정 */
   line-height: 1.8;
-  border-top-left-radius: 25px; /* 푸터 상단 모서리 둥글게 */
-  border-top-right-radius: 25px;
+  border-top-left-radius: 30px; /* 푸터 상단 모서리 둥글게 */
+  border-top-right-radius: 30px;
 }
 
 footer p {
-  margin: 0.6rem 0;
+  margin: 0.7rem 0;
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
   .bookshelf {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 3rem;
   }
   .book-cover {
-    height: 250px;
+    height: 270px;
   }
   .book-card {
-    padding: 1.5rem;
+    padding: 1.8rem;
   }
   .header h1 {
-    font-size: 3rem;
+    font-size: 3.1rem;
+  }
+  .header p {
+    font-size: 1.35rem;
   }
 }
 
 @media (max-width: 1024px) { /* Tablet landscape and smaller */
   .header h1 {
-    font-size: 2.7rem;
+    font-size: 2.8rem;
   }
   .header p {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   .book-category-section {
     padding: 0 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 4.5rem;
   }
   .category-title {
-    font-size: 2.4rem;
-    margin-bottom: 3rem;
+    font-size: 2.6rem;
+    margin-bottom: 3.5rem;
   }
   .category-title::after {
-    width: 100px;
-    height: 5px;
+    width: 110px;
+    height: 6px;
   }
   .bookshelf {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 2.5rem;
   }
   .book-cover {
-    height: 220px;
+    height: 240px;
   }
   .book-card h3 {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
   }
   .book-card p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   footer {
-    padding: 3rem 1rem;
-    margin-top: 4rem;
+    padding: 3.5rem 1rem;
+    margin-top: 4.5rem;
   }
 }
 
@@ -299,7 +308,7 @@ footer p {
     margin-bottom: 3rem;
   }
   .header h1 {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
   }
   .header p {
     font-size: 1.1rem;
@@ -307,34 +316,96 @@ footer p {
   
   .book-category-section {
     padding: 0 0.75rem;
+    margin-bottom: 4rem;
+  }
+  .category-title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+  .category-title::after {
+    width: 90px;
+    height: 5px;
+  }
+
+  .bookshelf {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 2rem;
+  }
+  
+  .book-card {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+  
+  .book-cover {
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .book-thumbnail {
+    border-radius: 8px;
+  }
+  
+  .book-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .book-card p {
+    font-size: 0.95rem;
+  }
+  footer {
+    padding: 3rem 1rem;
+    margin-top: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile devices */
+  .header {
+    padding: 2.5rem 0.5rem 2rem;
+    margin-bottom: 2.5rem;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  
+  .header h1 {
+    font-size: 1.9rem;
+  }
+  .header p {
+    font-size: 1rem;
+  }
+  
+  .book-category-section {
+    padding: 0 0.5rem;
     margin-bottom: 3.5rem;
   }
   .category-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 2.5rem;
   }
   .category-title::after {
-    width: 80px;
+    width: 70px;
     height: 4px;
   }
 
   .bookshelf {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.75rem;
+    grid-template-columns: 1fr; /* 단일 컬럼으로 변경 */
+    gap: 1.8rem;
   }
   
   .book-card {
-    padding: 1.3rem;
-    border-radius: 12px;
+    max-width: 320px; /* 단일 컬럼 카드 최대 너비 */
+    margin: 0 auto;
+    padding: 1.8rem;
+    border-radius: 18px;
   }
   
   .book-cover {
-    height: 190px;
-    border-radius: 8px;
+    height: 220px; /* 단일 컬럼에서 이미지 크기 조정 */
+    border-radius: 12px;
   }
 
   .book-thumbnail {
-    border-radius: 6px;
+    border-radius: 10px;
   }
   
   .book-card h3 {
@@ -344,104 +415,42 @@ footer p {
   .book-card p {
     font-size: 0.9rem;
   }
+
   footer {
     padding: 2.5rem 1rem;
     margin-top: 3rem;
-  }
-}
-
-@media (max-width: 480px) { /* Mobile devices */
-  .header {
-    padding: 2.5rem 0.5rem 2rem;
-    margin-bottom: 2.5rem;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-  
-  .header h1 {
-    font-size: 1.8rem;
-  }
-  .header p {
-    font-size: 0.95rem;
-  }
-  
-  .book-category-section {
-    padding: 0 0.5rem;
-    margin-bottom: 3rem;
-  }
-  .category-title {
-    font-size: 1.7rem;
-    margin-bottom: 2rem;
-  }
-  .category-title::after {
-    width: 60px;
-    height: 3px;
-  }
-
-  .bookshelf {
-    grid-template-columns: 1fr; /* 단일 컬럼으로 변경 */
-    gap: 1.5rem;
-  }
-  
-  .book-card {
-    max-width: 300px; /* 단일 컬럼 카드 최대 너비 */
-    margin: 0 auto;
-    padding: 1.5rem;
-    border-radius: 15px;
-  }
-  
-  .book-cover {
-    height: 200px; /* 단일 컬럼에서 이미지 크기 조정 */
-    border-radius: 10px;
-  }
-
-  .book-thumbnail {
-    border-radius: 8px;
-  }
-  
-  .book-card h3 {
-    font-size: 1.2rem;
-  }
-  
-  .book-card p {
-    font-size: 0.85rem;
-  }
-
-  footer {
-    padding: 2rem 1rem;
-    margin-top: 2.5rem;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
   }
 }
 
 @media (max-width: 320px) { /* 매우 작은 모바일 기기 */
   .header h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   .header p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   .book-category-section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
   }
   .category-title {
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
   .book-card {
-    padding: 1.2rem;
+    padding: 1.5rem;
   }
   .book-cover {
-    height: 160px;
+    height: 180px;
   }
   .book-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
   .book-card p {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
   footer {
-    padding: 1.5rem 0.8rem;
+    padding: 2rem 0.8rem;
   }
 }
