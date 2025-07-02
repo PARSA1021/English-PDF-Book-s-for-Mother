@@ -4,13 +4,13 @@
 }
 
 body {
-  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif; /* 마지막 정의에 따라 sans-serif를 남김 */
   /* 배경: 학습 자료 같은 차분하고 부드러운 그라데이션 (종이 질감 느낌) */
   background: linear-gradient(135deg, #f8fcfd 0%, #eef6f9 100%); /* Warm light blue-grey to off-white */
   margin: 0;
   padding: 0;
   color: #333; /* 기본 텍스트 색상 유지 */
-  line-height: 1.65;
+  line-height: 1.65; /* 더 큰 값을 유지 */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -19,13 +19,13 @@ body {
 /* Header Styling */
 .header {
   text-align: center;
-  padding: 3.5rem 1rem 2.5rem;
+  padding: 3.5rem 1rem 2.5rem; /* 더 큰 패딩 값을 유지 */
   /* 헤더 배경: 신뢰감 있는 톤의 그라데이션 */
   background: linear-gradient(135deg, #e0f2f7 0%, #ccebf2 100%); /* Light aqua to soft blue */
   box-shadow: 0 12px 30px rgba(0,0,0,0.15); /* 그림자 강화 */
   position: relative;
   overflow: hidden;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3.5rem; /* 더 큰 마진 값을 유지 */
   border-bottom-left-radius: 35px; /* 모서리 더 둥글게 */
   border-bottom-right-radius: 35px;
   animation: headerFadeIn 1s ease-out forwards;
@@ -75,11 +75,21 @@ body {
   opacity: 0.95;
 }
 
+main { /* 첫 번째 블록에 없던 main 태그 추가 */
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
 /* Book Category Section Styling */
 .book-category-section {
-  max-width: 1300px;
+  max-width: 1300px; /* 더 큰 너비를 유지 */
   margin: 0 auto 6rem auto; /* 섹션 간 마진 증가 */
-  padding: 0 1.5rem;
+  padding: 0 1.5rem; /* 패딩 값 유지 */
+  /* 두 번째 블록에서 추가된 스타일 */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
 .category-title {
@@ -109,7 +119,7 @@ body {
 
 /* Bookshelf Grid */
 .bookshelf {
-  display: grid;
+  display: grid; /* Flexbox 대신 Grid 사용 (더 강력한 레이아웃 기능) */
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* 최소 너비 증가, 더 큰 카드 */
   gap: 3.5rem; /* 간격 증가 */
   padding: 0;
@@ -161,8 +171,8 @@ body {
 .book-card a {
   text-decoration: none;
   color: inherit;
-  display: flex;
-  flex-direction: column;
+  display: flex; /* flexbox를 유지하여 내부 콘텐츠 정렬 */
+  flex-direction: column; /* 세로 방향 정렬 */
   height: 100%;
 }
 
@@ -187,7 +197,7 @@ body {
 .book-thumbnail {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: contain; /* object-fit: cover 대신 contain을 사용하여 이미지 비율 유지 */
   border-radius: 10px; /* 이미지 모서리 둥글게 */
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
   box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* 썸네일 이미지 자체 그림자 강화 */
@@ -313,7 +323,7 @@ footer p {
   .header p {
     font-size: 1.1rem;
   }
-  
+
   .book-category-section {
     padding: 0 0.75rem;
     margin-bottom: 4rem;
@@ -331,12 +341,12 @@ footer p {
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     gap: 2rem;
   }
-  
+
   .book-card {
     padding: 1.5rem;
     border-radius: 14px;
   }
-  
+
   .book-cover {
     height: 200px;
     border-radius: 10px;
@@ -345,11 +355,11 @@ footer p {
   .book-thumbnail {
     border-radius: 8px;
   }
-  
+
   .book-card h3 {
     font-size: 1.3rem;
   }
-  
+
   .book-card p {
     font-size: 0.95rem;
   }
@@ -366,14 +376,14 @@ footer p {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
   }
-  
+
   .header h1 {
     font-size: 1.9rem;
   }
   .header p {
     font-size: 1rem;
   }
-  
+
   .book-category-section {
     padding: 0 0.5rem;
     margin-bottom: 3.5rem;
@@ -391,14 +401,14 @@ footer p {
     grid-template-columns: 1fr; /* 단일 컬럼으로 변경 */
     gap: 1.8rem;
   }
-  
+
   .book-card {
     max-width: 320px; /* 단일 컬럼 카드 최대 너비 */
     margin: 0 auto;
     padding: 1.8rem;
     border-radius: 18px;
   }
-  
+
   .book-cover {
     height: 220px; /* 단일 컬럼에서 이미지 크기 조정 */
     border-radius: 12px;
@@ -407,11 +417,11 @@ footer p {
   .book-thumbnail {
     border-radius: 10px;
   }
-  
+
   .book-card h3 {
     font-size: 1.25rem;
   }
-  
+
   .book-card p {
     font-size: 0.9rem;
   }

@@ -13,113 +13,94 @@
     <p>엄마의 영어 수업을 위한 온라인 책장입니다. 다양한 시리즈별로 정리되어 있습니다.</p>
   </div>
 
-  <main>
-    <section id="family-friends-series" class="book-category-section">
-      <h2 class="category-title">Family & Friends Series</h2>
-      <div class="bookshelf">
-        <div class="book-card">
-          <a href="pdfjs/web/viewer.html?file=/BOOK/FamilyAndFriends/FF%201.pdf" target="_blank">
-            <div class="book-cover ff1">
-              <img src="assets/images/FamilyAndFriends/FF1.jpg" alt="Family & Friends 1 Cover" class="book-thumbnail">
-            </div>
-            <h3>Family & Friends 1</h3>
-            <p>Student Book</p>
-          </a>
-        </div>
-        <div class="book-card">
-          <a href="pdfjs/web/viewer.html?file=/BOOK/FamilyAndFriends/FF%202.pdf" target="_blank">
-            <div class="book-cover ff2">
-              <img src="assets/images/FamilyAndFriends/FF2.jpg" alt="Family & Friends 2 Cover" class="book-thumbnail">
-            </div>
-            <h3>Family & Friends 2</h3>
-            <p>Student Book</p>
-          </a>
-        </div>
-        <div class="book-card">
-          <a href="pdfjs/web/viewer.html?file=/BOOK/FamilyAndFriends/FF%203.pdf" target="_blank">
-            <div class="book-cover ff3">
-              <img src="assets/images/FamilyAndFriends/FF3.jpg" alt="Family & Friends 3 Cover" class="book-thumbnail">
-            </div>
-            <h3>Family & Friends 3</h3>
-            <p>Student Book</p>
-          </a>
-        </div>
-        <div class="book-card">
-          <a href="pdfjs/web/viewer.html?file=/BOOK/FamilyAndFriends/FF%204.pdf" target="_blank">
-            <div class="book-cover ff4">
-              <img src="assets/images/FamilyAndFriends/FF4.jpg" alt="Family & Friends 4 Cover" class="book-thumbnail">
-            </div>
-            <h3>Family & Friends 4</h3>
-            <p>Student Book</p>
-          </a>
-        </div>
-        <div class="book-card">
-          <a href="pdfjs/web/viewer.html?file=/BOOK/FamilyAndFriends/FF%205.pdf" target="_blank">
-            <div class="book-cover ff5">
-              <img src="assets/images/FamilyAndFriends/FF5.jpg" alt="Family & Friends 5 Cover" class="book-thumbnail">
-            </div>
-            <h3>Family & Friends 5</h3>
-            <p>Student Book</p>
-          </a>
-        </div>
-        <div class="book-card">
-          <a href="pdfjs/web/viewer.html?file=/BOOK/FamilyAndFriends/FF%206.pdf" target="_blank">
-            <div class="book-cover ff6">
-              <img src="assets/images/FamilyAndFriends/FF6.jpg" alt="Family & Friends 6 Cover" class="book-thumbnail">
-            </div>
-            <h3>Family & Friends 6</h3>
-            <p>Student Book</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="touchstone-series" class="book-category-section">
-      <h2 class="category-title">Touchstone Series</h2>
-      <div class="bookshelf">
-        <div class="book-card">
-          <a href="pdfjs/web/viewer.html?file=/BOOK/Touchstone/Touchstone%201.pdf" target="_blank">
-            <div class="book-cover ff1">
-              <img src="assets/images/Touchstone/Touchstone 1.jpg" alt="Touchstone 1 Cover" class="book-thumbnail">
-            </div>
-            <h3>Touchstone 1 2nd Edition</h3>
-            <p>Student Book</p>
-          </a>
-        </div>
-        <div class="book-card">
-          <a href="pdfjs/web/viewer.html?file=/BOOK/Touchstone/Touchstone%202.pdf" target="_blank">
-            <div class="book-cover ff2">
-              <img src="assets/images/Touchstone/Touchstone 2.jpg" alt="Touchstone 2 Cover" class="book-thumbnail">
-            </div>
-            <h3>Touchstone 2 2nd Edition</h3>
-            <p>Student Book</p>
-          </a>
-        </div>
-        <div class="book-card">
-          <a href="pdfjs/web/viewer.html?file=/BOOK/Touchstone/Touchstone%203.pdf" target="_blank">
-            <div class="book-cover ff3">
-              <img src="assets/images/Touchstone/Touchstone 3.jpg" alt="Touchstone 3 Cover" class="book-thumbnail">
-            </div>
-            <h3>Touchstone 3 2nd Edition</h3>
-            <p>Student Book</p>
-          </a>
-        </div>
-        <div class="book-card">
-          <a href="pdfjs/web/viewer.html?file=/BOOK/Touchstone/Touchstone%204.pdf" target="_blank">
-            <div class="book-cover ff4">
-              <img src="assets/images/Touchstone/Touchstone 4.jpg" alt="Touchstone 4 Cover" class="book-thumbnail">
-            </div>
-            <h3>Touchstone 4 2nd Edition</h3>
-            <p>Student Book</p>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
+  <main id="main-content">
+    </main>
 
   <footer>
     <p>🧠 <strong>팁:</strong> 책을 클릭하면 PDF.js 뷰어로 열립니다.</p>
     <p>로컬 테스트 시 <code>Live Server</code> 또는 <code>python3 -m http.server</code>를 사용하세요.</p>
   </footer>
+
+  <script>
+    const bookData = [
+      {
+        id: "family-friends-series",
+        title: "Family & Friends Series",
+        books: [
+          {"title": "Family & Friends 1", "image": "assets/images/FamilyAndFriends/FF1.jpg", "pdf": "BOOK/FamilyAndFriends/FF%201.pdf"},
+          {"title": "Family & Friends 2", "image": "assets/images/FamilyAndFriends/FF2.jpg", "pdf": "BOOK/FamilyAndFriends/FF%202.pdf"},
+          {"title": "Family & Friends 3", "image": "assets/images/FamilyAndFriends/FF3.jpg", "pdf": "BOOK/FamilyAndFriends/FF%203.pdf"},
+          {"title": "Family & Friends 4", "image": "assets/images/FamilyAndFriends/FF4.jpg", "pdf": "BOOK/FamilyAndFriends/FF%204.pdf"},
+          {"title": "Family & Friends 5", "image": "assets/images/FamilyAndFriends/FF5.jpg", "pdf": "BOOK/FamilyAndFriends/FF%205.pdf"},
+          {"title": "Family & Friends 6", "image": "assets/images/FamilyAndFriends/FF6.jpg", "pdf": "BOOK/FamilyAndFriends/FF%206.pdf"},
+        ]
+      },
+      {
+        id: "touchstone-series",
+        title: "Touchstone Series",
+        books: [
+          {"title": "Touchstone 1 2nd Edition", "image": "assets/images/Touchstone/Touchstone 1.jpg", "pdf": "BOOK/Touchstone/Touchstone%201.pdf"},
+          {"title": "Touchstone 2 2nd Edition", "image": "assets/images/Touchstone/Touchstone 2.jpg", "pdf": "BOOK/Touchstone/Touchstone%202.pdf"},
+          {"title": "Touchstone 3 2nd Edition", "image": "assets/images/Touchstone/Touchstone 3.jpg", "pdf": "BOOK/Touchstone/Touchstone%203.pdf"},
+          {"title": "Touchstone 4 2nd Edition", "image": "assets/images/Touchstone/Touchstone 4.jpg", "pdf": "BOOK/Touchstone/Touchstone%204.pdf"},
+        ]
+      }
+    ];
+
+    const mainContent = document.getElementById('main-content');
+
+    bookData.forEach(category => {
+      const section = document.createElement('section');
+      section.id = category.id;
+      section.classList.add('book-category-section');
+
+      const title = document.createElement('h2');
+      title.classList.add('category-title');
+      title.textContent = category.title;
+      section.appendChild(title);
+
+      const bookshelfDiv = document.createElement('div');
+      bookshelfDiv.classList.add('bookshelf');
+
+      category.books.forEach(book => {
+        const bookCard = document.createElement('div');
+        bookCard.classList.add('book-card');
+
+        const link = document.createElement('a');
+        // Ensure the PDF path is correctly encoded for URL (spaces replaced with %20)
+        const encodedPdfPath = book.pdf.replace(/ /g, '%20');
+        link.href = `pdfjs/web/viewer.html?file=/${encodedPdfPath}`;
+        link.target = "_blank"; // Open in new tab
+
+        const bookCoverDiv = document.createElement('div');
+        bookCoverDiv.classList.add('book-cover');
+        // You might want to add dynamic classes based on the book, e.g., book.id or a simplified title
+        // For now, I'm removing the specific 'ff1', 'ff2' classes as they are less generic
+        // If you need specific styling per book, consider adding data attributes or a more generic class and use CSS child selectors.
+
+        const img = document.createElement('img');
+        img.src = book.image;
+        img.alt = `${book.title} Cover`;
+        img.classList.add('book-thumbnail');
+        img.loading = "lazy"; // Add this line for lazy loading
+        bookCoverDiv.appendChild(img);
+        link.appendChild(bookCoverDiv);
+
+        const h3 = document.createElement('h3');
+        h3.textContent = book.title;
+        link.appendChild(h3);
+
+        const p = document.createElement('p');
+        p.textContent = "Student Book";
+        link.appendChild(p);
+
+        bookCard.appendChild(link);
+        bookshelfDiv.appendChild(bookCard);
+      });
+
+      section.appendChild(bookshelfDiv);
+      mainContent.appendChild(section);
+    });
+  </script>
 </body>
 </html>
