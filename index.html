@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>엄마의 책장</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#4CAF50"> <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="엄마의 책장">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png"> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- PDF.js 라이브러리 프리로드 -->
+    <link rel="preload" href="pdfjs/build/pdf.mjs" as="script" type="module">
+    <link rel="preload" href="pdfjs/web/viewer.mjs" as="script" type="module">
+    <link rel="preload" href="pdfjs/web/viewer.css" as="style">
+</head>
+<body>
+    <div class="app-container">
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h2>📚 카테고리</h2>
+                <button id="closeSidebar" class="mobile-only">&times;</button>
+            </div>
+            <nav id="category-nav">
+                <ul id="category-list">
+                    <!-- JS에서 동적으로 생성됨 -->
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="main-content">
+            <header>
+                <div class="header-top">
+                    <button id="menuToggle" class="mobile-only" aria-label="메뉴 열기">☰</button>
+                    <h1>엄마의 책장</h1>
+                </div>
+                <div class="search-container">
+                    <input type="search" id="searchInput" placeholder="책 제목 또는 시리즈 검색..." aria-label="책 제목 또는 시리즈 검색">
+                    <button id="clearSearchBtn" aria-label="검색 지우기" style="display: none;">&times;</button>
+                </div>
+                <button id="helpBtn" class="help-btn" aria-label="도움말">❓ 사용법</button>
+            </header>
+
+            <section id="favorites-section" class="book-category-section" style="display: none;">
+                <h2 class="category-title" tabindex="0" aria-expanded="true">💖 즐겨찾기</h2>
+                <div id="favorites-bookshelf" class="bookshelf">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+        <p>PDF를 불러오는 중...</p>
+    </div>
+
+    <!-- PDF 뷰어 모달 -->
+    <div id="pdf-modal" class="pdf-modal">
+        <div class="pdf-modal-header">
+            <h2 id="pdf-modal-title"></h2>
+            <button id="close-pdf-modal" aria-label="닫기">&times;</button>
+        </div>
+        <div class="pdf-modal-body">
+            <iframe id="pdf-iframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- 도움말 모달 -->
+    <div id="help-modal" class="pdf-modal">
+        <div class="pdf-modal-header">
+            <h2>📚 새로운 책 추가하는 방법</h2>
+            <button id="close-help-modal" aria-label="닫기">&times;</button>
+        </div>
+        <div class="help-modal-content" style="padding: 2rem; overflow-y: auto; background: #fff;">
+            <div class="help-step">
+                <h3>1단계: 파일 준비</h3>
+                <p>추가하고 싶은 PDF 파일을 <strong>BOOK</strong> 폴더에 넣으세요.</p>
+                <p style="font-size: 0.9rem; color: #666;">(이미지 파일이 있다면 assets/images 폴더에 PDF와 같은 이름으로 넣어주세요.)</p>
+            </div>
+            <hr style="margin: 1.5rem 0; border: 0; border-top: 1px solid #eee;">
+            <div class="help-step">
+                <h3>2단계: 목록 업데이트</h3>
+                <p>폴더에 있는 <strong>'책목록업데이트.command'</strong> 파일을 더블 클릭하세요.</p>
+                <p style="font-size: 0.9rem; color: #666;">(검은 창이 뜨고 '성공' 메시지가 나오면 완료됩니다.)</p>
+            </div>
+            <hr style="margin: 1.5rem 0; border: 0; border-top: 1px solid #eee;">
+            <div class="help-step">
+                <h3>3단계: 확인</h3>
+                <p>웹사이트를 새로고침하면 새로운 책이 화면에 나타납니다!</p>
+            </div>
+            <div style="margin-top: 2rem; padding: 1rem; background: #e8eaf6; border-radius: 8px;">
+                <p>💡 <strong>팁:</strong> 파일을 폴더에 그냥 넣기만 해도 '추가된 교재' 카테고리에 자동으로 들어갑니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
